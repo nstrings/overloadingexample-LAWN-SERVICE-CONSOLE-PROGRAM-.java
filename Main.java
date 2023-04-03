@@ -28,8 +28,7 @@ class Main {
     while (keep){ 
   Scanner ss = new Scanner(System.in);
              if(schedule.size() >= 40){
-            System.out.println("[ERROR]: Reached customer limit capacity.\n\n");
-            System.out.println("Remove the previous entry? [TYPE Y OR YES:]\n\n");
+            System.out.println("[ERROR]: Reached customer limit capacity.\n\n Remove the previous entry? [TYPE Y OR YES:]\n\n");
             String d=ss.nextLine();
             if(d.equals("y")||d.equals("Y")|| d.equals("yes")|| d.equals("Yes")|| d.equals("YES")){
               schedule.remove(1);
@@ -56,7 +55,7 @@ class Main {
         Appointment currentAppointment = new Appointment(customer, address, date, servicetype);
         }
       }
-      System.out.println("[CUSTOMER NAME: \t\t" + "ADDRESS: \t\t" + "DATE: \t\t" + "SERVICE TYPE]\n\n");
+      System.out.println("CUSTOMER NAME: \t\t" + "ADDRESS: \t\t" + "DATE: \t\t" + "SERVICE TYPE\n\n");
         for(Appointment currentApp : schedule){ System.out.println(currentApp.customer+"\t\t"+"\t\t"+currentApp.address+"\t\t\t"+currentApp.date+"\t\t"+currentApp.servicetype);
     }
   }
